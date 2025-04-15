@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Mokepon !!!</h1>
+
+    <!-- Seleccionar Mascota -->
+    <section id="seleccionar-mascota">
+      <h2>Elige tu mascota:</h2>
+
+      <label for="pokeagua">Pokeagua</label>
+      <input type="radio" name="mascota" id="pokeagua" />
+
+      <label for="poketierra">Poketierra</label>
+      <input type="radio" name="mascota" id="poketierra" />
+
+      <label for="pokefuego">Pokefuego</label>
+      <input type="radio" name="mascota" id="pokefuego" />
+
+      <button id="btn-mascota">Seleccionar</button>
+    </section>
+
+    <!-- Seleccionar Ataque -->
+    <section id="seleccionar-ataque">
+      <h2>Elige tu ataque:</h2>
+
+      <p>
+        Tu mascota <span id="mascota-jugador"></span> tiene <span>3</span> vidas
+      </p>
+      <p>
+        La mascota <span id="mascota-enemigo"></span> del enemigo tiene
+        <span>3</span> vidas
+      </p>
+
+      <div>
+        <button id="btn-agua">Agua</button>
+        <button id="btn-tierra">Tierra</button>
+        <button id="btn-fuego">Fuego</button>
+      </div>
+    </section>
+
+    <!-- Mensajes -->
+    <section id="mensajes"></section>
+
+    <!-- Reiniciar -->
+    <section id="reiniciar">
+      <button>Reiniciar</button>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
