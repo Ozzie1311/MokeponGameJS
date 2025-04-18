@@ -10,6 +10,10 @@ let btnTierra = document.getElementById("btn-tierra");
 let btnFuego = document.getElementById("btn-fuego");
 let spanVidasJugador = document.getElementById("vidas-jugador");
 let spanVidasEnemigo = document.getElementById("vidas-enemigo");
+let btnReinciar = document.getElementById("btn-reiniciar");
+let sectionMensajeFinal = document.getElementById("mensaje-final");
+let sectionMensajes = document.getElementById("mensajes");
+let sectionSeleccionarMascota = document.getElementById("seleccionar-mascota");
 
 let ataqueJugador;
 let ataqueEnemigo;
@@ -18,6 +22,10 @@ let vidasJugador = 3;
 let vidasEnemigo = 3;
 
 const mascotas = ["Pokeagua", "Poketierra", "Pokefuego"];
+const sectionAtaque = document.getElementById("seleccionar-ataque");
+const sectionReiniciar = document.getElementById("reiniciar");
+sectionAtaque.style.display = "none";
+sectionReiniciar.style.display = "none";
 
 function iniciarJuego() {
   botonMascota.addEventListener("click", seleccionarMascota);
@@ -25,33 +33,23 @@ function iniciarJuego() {
   btnAgua.addEventListener("click", ataqueAgua);
   btnTierra.addEventListener("click", ataqueTierra);
   btnFuego.addEventListener("click", ataqueFuego);
+
+  btnReinciar.addEventListener("click", reiniciarJuego);
 }
 
 function ataqueAgua() {
-  if (vidasEnemigo === 0 || vidasJugador === 0) {
-    alert("Che!! Tenes que reiniciar el Juego");
-  } else {
-    ataqueJugador = "Agua";
-    ataqueAleatorioEnemigo();
-  }
+  ataqueJugador = "Agua";
+  ataqueAleatorioEnemigo();
 }
 
 function ataqueTierra() {
-  if (vidasEnemigo === 0 || vidasJugador === 0) {
-    alert("Che!! Tenes que reiniciar el Juego");
-  } else {
-    ataqueJugador = "Tierra";
-    ataqueAleatorioEnemigo();
-  }
+  ataqueJugador = "Tierra";
+  ataqueAleatorioEnemigo();
 }
 
 function ataqueFuego() {
-  if (vidasEnemigo === 0 || vidasJugador === 0) {
-    alert("Che!! Tenes que reiniciar el Juego");
-  } else {
-    ataqueJugador = "Fuego";
-    ataqueAleatorioEnemigo();
-  }
+  ataqueJugador = "Fuego";
+  ataqueAleatorioEnemigo();
 }
 
 function crearMensaje(resultado) {
@@ -87,6 +85,7 @@ function seleccionarMascota() {
   spanVidasEnemigo.innerHTML = vidasEnemigo;
   spanVidasJugador.innerHTML = vidasJugador;
   seleccionarMascotaEnemigo();
+  sectionAtaque.style.display = "block";
 }
 
 function combateMascotas() {
@@ -109,11 +108,44 @@ function combateMascotas() {
     spanVidasJugador.innerHTML = vidasJugador;
     crearMensaje("PERDISTE");
   }
+
+  revisarVidas();
+}
+
+function revisarVidas() {
+  if (vidasEnemigo === 0) {
+    crearMensajeFinal(
+      "Felicidades, has ganado!! tu enemigo se ha quedado sin vidas"
+    );
+    return;
+  } else if (vidasJugador === 0) {
+    crearMensajeFinal(
+      "Lástima, tu mascota se ha quedado sin vidas y has perdido!!"
+    );
+    return;
+  }
+}
+
+function crearMensajeFinal(mensaje) {
+  let parrafo = document.createElement("p");
+  parrafo.innerHTML = `${mensaje}`;
+  sectionMensajeFinal.appendChild(parrafo);
+
+  btnAgua.disabled = true;
+  btnTierra.disabled = true;
+  btnFuego.disabled = true;
+  sectionMensajes.style.display = "none";
+  sectionReiniciar.style.display = "block";
+  sectionSeleccionarMascota.style.display = "none";
 }
 
 function seleccionarMascotaEnemigo() {
   let random = Math.floor(Math.random() * mascotas.length);
   mascotaEnemigo.innerText = mascotas[random];
+}
+
+function reiniciarJuego() {
+  location.reload();
 }
 
 window.addEventListener("load", iniciarJuego);
