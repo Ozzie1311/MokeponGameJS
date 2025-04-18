@@ -7,30 +7,56 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 id="titulo-principal">Mokepon !!!</h1>
-
     <!-- Seleccionar Mascota -->
     <section id="seleccionar-mascota">
+      <h1 id="titulo-principal">Mokepon !!!</h1>
+
       <h2>Elige tu mascota:</h2>
 
       <div id="contenedor-inputs">
-        <label for="pokeagua">Pokeagua</label>
+        <label for="pokeagua">
+          <p>Pokeagua</p>
+          <img
+            src="./assets/mokepons_mokepon_hipodoge_attack.webp"
+            alt="Imagen pokeagua"
+          />
+        </label>
         <input type="radio" name="mascota" id="pokeagua" />
 
-        <label for="poketierra">Poketierra</label>
+        <label for="poketierra">
+          <p>Poketierra</p>
+          <img
+            src="./assets/mokepons_mokepon_capipepo_attack.webp"
+            alt="Imagen-poketierra"
+          />
+        </label>
         <input type="radio" name="mascota" id="poketierra" />
 
-        <label for="pokefuego">Pokefuego</label>
+        <label for="pokefuego">
+          <p>Pokefuego</p>
+          <img
+            src="./assets/mokepons_mokepon_ratigueya_attack.webp"
+            alt="Imagen-pokefuego"
+          />
+        </label>
         <input type="radio" name="mascota" id="pokefuego" />
       </div>
-
       <button id="btn-mascota">Seleccionar</button>
     </section>
 
     <!-- Seleccionar Ataque -->
     <section id="seleccionar-ataque">
-      <h2>Elige tu ataque:</h2>
+      <h1 id="titulo-principal">Mokepon !!!</h1>
 
+      <div id="seleccion-ataque">
+        <h2>Elige tu ataque:</h2>
+
+        <div id="contenedor-botones">
+          <button class="boton-ataque" id="btn-agua">Agua</button>
+          <button class="boton-ataque" id="btn-tierra">Tierra</button>
+          <button class="boton-ataque" id="btn-fuego">Fuego</button>
+        </div>
+      </div>
       <p>
         Tu mascota <span id="mascota-jugador"></span> tiene
         <span id="vidas-jugador"></span> vidas
@@ -39,12 +65,6 @@
         La mascota <span id="mascota-enemigo"></span> del enemigo tiene
         <span id="vidas-enemigo"></span> vidas
       </p>
-
-      <div>
-        <button id="btn-agua">Agua</button>
-        <button id="btn-tierra">Tierra</button>
-        <button id="btn-fuego">Fuego</button>
-      </div>
     </section>
 
     <!-- Mensajes -->
