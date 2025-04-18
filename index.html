@@ -4,22 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Mokepon !!!</h1>
+    <h1 id="titulo-principal">Mokepon !!!</h1>
 
     <!-- Seleccionar Mascota -->
     <section id="seleccionar-mascota">
       <h2>Elige tu mascota:</h2>
 
-      <label for="pokeagua">Pokeagua</label>
-      <input type="radio" name="mascota" id="pokeagua" />
+      <div id="contenedor-inputs">
+        <label for="pokeagua">Pokeagua</label>
+        <input type="radio" name="mascota" id="pokeagua" />
 
-      <label for="poketierra">Poketierra</label>
-      <input type="radio" name="mascota" id="poketierra" />
+        <label for="poketierra">Poketierra</label>
+        <input type="radio" name="mascota" id="poketierra" />
 
-      <label for="pokefuego">Pokefuego</label>
-      <input type="radio" name="mascota" id="pokefuego" />
+        <label for="pokefuego">Pokefuego</label>
+        <input type="radio" name="mascota" id="pokefuego" />
+      </div>
 
       <button id="btn-mascota">Seleccionar</button>
     </section>
@@ -47,9 +50,12 @@
     <!-- Mensajes -->
     <section id="mensajes"></section>
 
+    <!-- Mensaje Final -->
+    <section id="mensaje-final"></section>
+
     <!-- Reiniciar -->
     <section id="reiniciar">
-      <button>Reiniciar</button>
+      <button id="btn-reiniciar">Reiniciar</button>
     </section>
 
     <script src="script.js"></script>
