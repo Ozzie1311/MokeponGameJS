@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+:root {
+  --background-color: #06202b;
+  --color-text: #f5eedd;
+  --default-font: "Nunito Sans", sans-serif;
+  --btn-color: #077a7d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color-text);
+  font-family: var(--default-font);
+}
+
+#titulo-principal {
+  font-family: "Poetsen One", sans-serif;
+  font-size: 56px;
+  text-align: center;
+  margin-top: 32px;
+  padding: 12px;
+}
+
+#seleccionar-mascota {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 560px;
+  margin: 0 auto;
+}
+
+#btn-mascota {
+  font-family: var(--default-font);
+  background-color: var(--btn-color);
+  color: var(--color-text);
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 24px;
+  border: none;
+  height: 44px;
+  font-size: 18px;
+}
