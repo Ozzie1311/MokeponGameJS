@@ -86,6 +86,7 @@ function seleccionarMascota() {
   spanVidasJugador.innerHTML = vidasJugador;
   seleccionarMascotaEnemigo();
   sectionAtaque.style.display = "block";
+  sectionSeleccionarMascota.style.display = "none";
 }
 
 function combateMascotas() {
