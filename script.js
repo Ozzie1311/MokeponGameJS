@@ -14,12 +14,17 @@ let btnReinciar = document.getElementById("btn-reiniciar");
 let sectionMensajeFinal = document.getElementById("mensaje-final");
 let sectionMensajes = document.getElementById("mensajes");
 let sectionSeleccionarMascota = document.getElementById("seleccionar-mascota");
+let sectionVidas = document.getElementById("contenedor-vidas");
+sectionSeleccionAtaque = document.getElementById("seleccion-ataque");
 
 let ataqueJugador;
 let ataqueEnemigo;
 // let resultadoCombate;
 let vidasJugador = 3;
 let vidasEnemigo = 3;
+
+let parrafo = document.createElement("p");
+let mensajeJuego = document.createElement("p");
 
 const mascotas = ["Pokeagua", "Poketierra", "Pokefuego"];
 const sectionAtaque = document.getElementById("seleccionar-ataque");
@@ -54,9 +59,9 @@ function ataqueFuego() {
 
 function crearMensaje(resultado) {
   let sectionMensajes = document.getElementById("mensajes");
-  let parrafo = document.createElement("p");
-  parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo} - ${resultado}`;
-  sectionMensajes.appendChild(parrafo);
+
+  mensajeJuego.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo} - ${resultado}`;
+  sectionMensajes.appendChild(mensajeJuego);
 }
 
 function ataqueAleatorioEnemigo() {
@@ -128,7 +133,6 @@ function revisarVidas() {
 }
 
 function crearMensajeFinal(mensaje) {
-  let parrafo = document.createElement("p");
   parrafo.innerHTML = `${mensaje}`;
   sectionMensajeFinal.appendChild(parrafo);
 
@@ -136,8 +140,9 @@ function crearMensajeFinal(mensaje) {
   btnTierra.disabled = true;
   btnFuego.disabled = true;
   sectionMensajes.style.display = "none";
-  sectionReiniciar.style.display = "block";
+  sectionReiniciar.style.display = "flex";
   sectionSeleccionarMascota.style.display = "none";
+  sectionSeleccionAtaque.style.display = "none";
 }
 
 function seleccionarMascotaEnemigo() {

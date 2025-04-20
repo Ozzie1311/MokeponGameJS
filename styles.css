@@ -21,6 +21,10 @@ body {
   font-family: var(--default-font);
 }
 
+button {
+  font-family: var(--default-font);
+}
+
 #titulo-principal {
   font-family: "Poetsen One", sans-serif;
   font-size: 56px;
@@ -126,4 +130,85 @@ input {
 .boton-ataque:hover {
   background-color: var(--cards-bgcolor);
   color: var(--background-color);
+}
+
+#mensajes,
+#mensaje-final {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#mensajes p {
+  margin-top: 8px;
+}
+
+#reiniciar {
+  align-content: flex-start;
+  justify-content: center;
+  padding: 20px;
+}
+
+#reiniciar #btn-reiniciar {
+  width: 250px;
+  height: 54px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--cards-bgcolor);
+  color: var(--background-color);
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#reiniciar #btn-reiniciar:hover {
+  background-color: var(--btn-color);
+  color: var(--color-text);
+}
+
+#contenedor-vidas {
+  /* border: 1px solid white; */
+  text-align: center;
+  width: 775px;
+  margin: 0 auto;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+#contenedor-vidas p {
+  background-color: var(--btn-color);
+  width: 250px;
+  padding: 20px;
+  border-radius: 20px;
+  border-color: transparent;
+  margin-top: 20px;
+}
+
+#vidas-jugador,
+#vidas-enemigo {
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--background-color);
+}
+
+/* Desde 0 hasta 880px */
+@media (max-width: 880px) {
+  #contenedor-inputs,
+  #contenedor-botones,
+  #contenedor-vidas {
+    flex-direction: column;
+  }
+
+  #contenedor-vidas {
+    align-items: center;
+    width: 300px;
+    margin-top: 6px;
+  }
+
+  #contenedor-vidas p {
+    margin-top: 4px;
+  }
 }
