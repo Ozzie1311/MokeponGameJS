@@ -71,7 +71,8 @@ button {
 label {
   width: 280px;
   height: 200px;
-  background-color: var(--btn-color);
+  background-color: var(--cards-bgcolor);
+  color: var(--background-color);
   padding: 12px;
   border-radius: 20px;
   display: flex;
@@ -98,6 +99,11 @@ label img {
 
 input {
   display: none;
+}
+
+input:checked + label {
+  background-color: var(--btn-color);
+  color: var(--color-text);
 }
 
 #seleccion-ataque {
