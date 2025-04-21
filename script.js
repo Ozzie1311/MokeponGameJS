@@ -32,6 +32,36 @@ const sectionReiniciar = document.getElementById("reiniciar");
 sectionAtaque.style.display = "none";
 sectionReiniciar.style.display = "none";
 
+class Mokepon {
+  constructor(nombre, foto, vidas) {
+    this.nombre = nombre;
+    this.foto = foto;
+    this.vidas = vidas;
+  }
+}
+
+let pokeagua = new Mokepon(
+  "Pokeagua",
+  "./assets/mokepons_mokepon_hipodoge_attack.webp",
+  3
+);
+
+let poketierra = new Mokepon(
+  "Poketierra",
+  "./assets/mokepons_mokepon_capipepo_attack.webp",
+  3
+);
+
+let pokefuego = new Mokepon(
+  "Pokefuego",
+  "./assets/mokepons_mokepon_ratigueya_attack.webp",
+  3
+);
+
+let mokepones = [];
+mokepones.push(pokeagua, poketierra, pokefuego);
+console.log(mokepones);
+
 function iniciarJuego() {
   botonMascota.addEventListener("click", seleccionarMascota);
 
