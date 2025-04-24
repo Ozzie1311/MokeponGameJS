@@ -71,7 +71,8 @@ button {
 label {
   width: 280px;
   height: 200px;
-  background-color: var(--btn-color);
+  background-color: var(--cards-bgcolor);
+  color: var(--background-color);
   padding: 12px;
   border-radius: 20px;
   display: flex;
@@ -101,8 +102,13 @@ input {
 }
 
 input:checked + label {
+<<<<<<< HEAD
   background-color: var(--cards-bgcolor);
   color: var(--background-color);
+=======
+  background-color: var(--btn-color);
+  color: var(--color-text);
+>>>>>>> refs/remotes/origin/main
 }
 
 #seleccion-ataque {
