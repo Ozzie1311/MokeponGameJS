@@ -259,33 +259,6 @@ ratigueya.ataques.push(
 
 mokepones.push(hipodoge, capipepo, ratigueya);
 
-class Mokepon {
-  constructor(nombre, imagen, vida) {
-    this.nombre = nombre;
-    this.imagen = imagen;
-    this.vida = vida;
-  }
-}
-
-let pokeagua = new Mokepon(
-  "Pokeagua",
-  "./assets/mokepons_mokepon_hipodoge_attack.webp",
-  3
-);
-
-let poketierra = new Mokepon(
-  "Poketierra",
-  "./assets/mokepons_mokepon_capipepo_attack.webp",
-  3
-);
-
-let pokefuego = new Mokepon(
-  "Pokefuego",
-  "./assets/mokepons_mokepon_ratigueya_attack.webp",
-  3
-);
-
-console.log(pokeagua, poketierra, pokefuego);
 function iniciarJuego() {
   sectionSeleccionAtaque.style.display = "none";
 
@@ -305,6 +278,7 @@ function iniciarJuego() {
   inputRatigueya = document.getElementById("Ratigueya");
 
   btnSeleccionarMascota.addEventListener("click", seleccionarMascota);
+  console.log("Acaso el juego ha empezado?");
 }
 
 function seleccionarMascota() {
