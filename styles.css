@@ -100,6 +100,11 @@ input {
   display: none;
 }
 
+input:checked + label {
+  background-color: var(--cards-bgcolor);
+  color: var(--background-color);
+}
+
 #seleccion-ataque {
   text-align: center;
   margin-top: 20px;
