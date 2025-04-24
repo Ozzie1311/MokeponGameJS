@@ -71,8 +71,8 @@ button {
 label {
   width: 280px;
   height: 200px;
-  background-color: var(--cards-bgcolor);
-  color: var(--background-color);
+  background-color: var(--btn-color);
+  color: var(--color-text);
   padding: 12px;
   border-radius: 20px;
   display: flex;
@@ -120,6 +120,14 @@ input:checked + label {
   margin: 0 auto;
 }
 
+#contenedor-ataque {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 32px;
+  margin: 20px auto;
+}
+
 .boton-ataque {
   width: 250px;
   height: 54px;
@@ -161,8 +169,8 @@ input:checked + label {
   height: 54px;
   border-radius: 20px;
   border: none;
-  background-color: var(--cards-bgcolor);
-  color: var(--background-color);
+  background-color: var(--background-color);
+  color: var(--color-text);
   font-weight: 500;
   font-size: 20px;
   cursor: pointer;
@@ -198,6 +206,35 @@ input:checked + label {
   font-size: 44px;
   font-weight: 600;
   color: var(--background-color);
+}
+
+#ataques {
+  display: grid;
+  grid-template-columns: 250px 250px;
+
+  place-content: center;
+  gap: 20px;
+}
+
+#ataques-jugador,
+#ataques-enemigo {
+  background-color: var(--btn-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  border-radius: 20px;
+}
+
+#contenedor-mensajes {
+  background-color: #eeeeee;
+  width: 360px;
+  margin: 20px auto;
+  border-radius: 20px;
+  padding: 12px;
+  color: var(--background-color);
+  text-align: center;
+  font-size: 24px;
 }
 
 /* Desde 0 hasta 880px */

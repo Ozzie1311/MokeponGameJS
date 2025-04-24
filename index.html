@@ -22,16 +22,12 @@
       <h1 id="titulo-principal">Mokepon !!!</h1>
 
       <div id="contenedor-ataque">
-        <h2>Elige tu ataque:</h2>
+        <h2>Elige tu secuencia de ataques</h2>
 
-        <div id="contenedor-botones">
-          <button class="boton-ataque" id="boton-agua">Agua</button>
-          <button class="boton-ataque" id="boton-tierra">Tierra</button>
-          <button class="boton-ataque" id="boton-fuego">Fuego</button>
-        </div>
+        <div id="contenedor-botones"></div>
       </div>
 
-      <div id="contenedor-vidas">
+      <!-- <div id="contenedor-vidas">
         <p>
           Tu mascota: <br />
           <span id="mascota-jugador"></span>
@@ -44,16 +40,30 @@
 
           <span id="vidas-enemigo"></span>
         </p>
-      </div>
+      </div> -->
 
       <div id="contenedor-mensajes">
-        <section id="mensajes"></section>
+        <section id="mensajes">Mucha suerte</section>
 
         <section id="mensaje-final"></section>
 
         <section id="reiniciar">
           <button id="btn-reiniciar">Reiniciar</button>
         </section>
+      </div>
+
+      <div id="ataques">
+        <div id="ataques-jugador">
+          <p id="mascota-jugador"></p>
+          <p id="vidas-jugador">0</p>
+          <div id="ataques-del-jugador"></div>
+        </div>
+
+        <div id="ataques-enemigo">
+          <p id="mascota-enemigo"></p>
+          <p id="vidas-enemigo">0</p>
+          <div id="ataques-del-enemigo"></div>
+        </div>
       </div>
     </section>
 
