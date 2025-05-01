@@ -17,6 +17,30 @@
       <button id="btn-mascota">Seleccionar</button>
     </section>
 
+    <section id="mapa-juego">
+      <h2 id="subtitulo">Recorre el mapa con tu mokepon</h2>
+      <canvas id="mapa"></canvas>
+      <div id="botones-mapa">
+        <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">
+          Arriba
+        </button>
+        <div>
+          <button
+            onmouseup="detenerMovimiento()"
+            onmousedown="moverIzquierda()"
+          >
+            Izquierda
+          </button>
+          <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">
+            Abajo
+          </button>
+          <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">
+            Derecha
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- Seleccionar Ataque -->
     <section id="seleccionar-ataque">
       <h1 id="titulo-principal">Mokepon !!!</h1>
@@ -26,21 +50,6 @@
 
         <div id="contenedor-botones"></div>
       </div>
-
-      <!-- <div id="contenedor-vidas">
-        <p>
-          Tu mascota: <br />
-          <span id="mascota-jugador"></span>
-          <br />
-          <span id="vidas-jugador"></span>
-        </p>
-        <p>
-          Mascota Enemigo: <br />
-          <span id="mascota-enemigo"></span><br />
-
-          <span id="vidas-enemigo"></span>
-        </p>
-      </div> -->
 
       <div id="contenedor-mensajes">
         <section id="mensajes">Mucha suerte</section>
